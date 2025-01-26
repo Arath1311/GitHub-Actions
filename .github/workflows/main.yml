@@ -1,0 +1,17 @@
+name: Mi primer workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Configurar repositorio
+      uses: actions/checkout@v3
+
+    - name: Verificar configuración
+      run: echo "GitHub Actions está configurado correctamente y funcionando"
